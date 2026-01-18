@@ -1,6 +1,6 @@
 # IOChaser Privacy Policy
 
-**Last updated:** 2026-01-09
+**Last updated:** 2026-01-18
 
 ## Overview
 IOChaser is a browser extension designed to help users extract and analyze Indicators of Compromise (IOCs) such as IP addresses, domains, hashes, and email addresses directly from webpages.
@@ -9,6 +9,8 @@ IOChaser is a browser extension designed to help users extract and analyze Indic
 IOChaser does **not collect, store, sell, or transmit personal user data** to the developer.
 
 The extension processes **visible webpage content locally in the user’s browser** only when explicitly triggered by the user. This processing is performed solely to identify and extract IOCs from the page.
+
+IOChaser does not use analytics, tracking technologies, fingerprinting, or background data collection.
 
 ## API Keys
 If users choose to provide API keys (for example, VirusTotal, AbuseIPDB, or Have I Been Pwned):
