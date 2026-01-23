@@ -1,53 +1,100 @@
-# IOChaser
-IOChaser is a lightweight Chrome extension designed for SOC analysts, threat hunters, and cybersecurity professionals to quickly extract and analyze Indicators of Compromise (IOCs) from any webpage.
+# IOChaser 🔎
 
-With one click, IOChaser automatically detects:
+**IOChaser** is a lightweight Chrome extension built for **SOC analysts, threat hunters, and blue teamers** who are tired of copy-pasting Indicators of Compromise from threat reports, phishing emails, and alerts in general.
 
-- IP addresses
+With **one click**, IOChaser extracts IOCs directly from the current webpage and lets you investigate them instantly using trusted threat-intelligence platforms (without leaving your tab).
 
-- Domains
+---
 
-- Email addresses
+## 🚀 What It Does
 
-- File hashes (MD5, SHA1, SHA256)
+IOChaser automatically detects and extracts:
 
-and allows you to analyze them using trusted threat intelligence platforms.
+- 🌐 IP addresses  
+- 🌍 Domains  
+- ✉️ Email addresses  
+- 🔑 File hashes (MD5, SHA1, SHA256)
 
-## Key Features
+All processing happens **locally in your browser**.
 
-### 🔍 Automatic IOC Extraction from the current webpage
+---
 
-### 🧠 Threat Analysis Integration using API calls:
+## ⚡ Why IOChaser?
 
-- VirusTotal (IPs, domains, hashes)
+Instead of:
+- Manually selecting text
+- Copy-pasting into multiple tools
+- Opening 10 new tabs
 
-- AbuseIPDB (IP reputation & reports)
+IOChaser lets you:
+- Click once
+- See all IOCs
+- Investigate instantly
 
-- Have I Been Pwned (email breach checks)
+Perfect for fast IOC triage during alerts or threat-hunting sessions.
 
-### 🎯 Smart and instant reputation scan:
+---
 
-Detects malicious, suspicious, or clean indicators without leaving your current page.
+## 🧠 Integrated Threat Intelligence
 
-### 🌐 External Investigation Tools: Shodan, GreyNoise, Talos, URLScan, AlienVault, Hybrid Analysis, and more
+Analyze extracted IOCs using built-in integrations:
+
+### 🔍 Primary Integrations using API calls
+- **VirusTotal** – IPs, domains, hashes  
+- **AbuseIPDB** – IP reputation & reports  
+- **Have I Been Pwned** – email breach checks  
+
+### 🌐 External Investigation Tools
+- Shodan  
+- GreyNoise  
+- Talos  
+- URLScan  
+- AlienVault OTX  
+- Hybrid Analysis  
+- (and more)
+
+---
+
+## 🎯 Key Features
+
+- 🔎 Automatic IOC extraction from any webpage  
+- ⚡ One-click reputation analysis  
+- 📋 One-click copy for any IOC  
+- ⚙️ Custom tool selection per IOC type  
+- 🔐 Local API key storage (keys never leave your browser)  
+
+---
+
+## 👥 Who Is This For?
+
+- SOC Analysts  
+- Incident Responders  
+- Threat Hunters  
+- DFIR & Blue Team professionals  
+- Security researchers  
+
+---
+
+## 🔒 Privacy & Security
+
+IOChaser:
+- Does **not** collect user data  
+- Does **not** send page content externally  
+- Processes everything **locally**, only when you click the extension  
+
+---
+
+## 🧪 Demo
+![iochaser_demo](https://github.com/user-attachments/assets/a09f2adc-736c-4ffd-834a-a8ed87b170d4)
 
 
-### 📋 One-click Copy of any IOC
+---
 
+## 📦 Install
+👉 **Chrome Web Store:** *[Download link](https://chromewebstore.google.com/detail/iochaser/gjomgdkjfhpmmmlleefbblnfeanmniem)*
 
-### ⚙️ Customizable Tool Selection per IOC type
+---
 
-
-### 🔐 Local API Key Storage: keys never leave your browser
-
-## Who Is This For?
-
-- SOC Analysts
-
-- Incident Responders
-
-- Threat Hunters
-
-- Blue Team & DFIR professionals
-
-- Security researchers
+## 💬 Feedback
+This tool was built by a cybersecuirty specialist to solve a real workflow problem.  
+Feedback, feature requests, and ideas are more than welcome.
