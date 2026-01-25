@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>IOChaser</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>IOChaser</h1>
+
+  <div id="tab-buttons">
+    <button id="tab-iocs" class="tab active">IOCs</button>
+    <button id="tab-settings" class="tab">Settings</button>
+  </div>
+
+  <div id="tab-content">
+    <div id="ioc-tab" class="tab-pane active">
+      <div id="search-container">
+        <input type="text" id="ioc-search" placeholder="Search IOCs...">
+      </div>
+      <div id="results"></div>
+    </div>
+
+    <div id="settings-tab" class="tab-pane">
+      <h2>API Keys</h2>
+      <div id="api-settings">
+        <label for="vt-api-key">VirusTotal API Key</label>
+        <input type="password" id="vt-api-key" placeholder="Paste your VirusTotal key">
+
+        <label for="abuse-api-key">AbuseIPDB API Key</label>
+        <input type="password" id="abuse-api-key" placeholder="Paste your AbuseIPDB key">
+
+        <label for="hibp-api-key">HIBP API Key</label>
+        <input type="password" id="hibp-api-key" placeholder="Paste your HIBP key">
+
+        <button id="save-api-keys">💾 Save Keys</button>
+
+        <p style="font-size: 11px; color: #aaa; margin-top: 8px;">
+          ⚠️ Your API keys are stored locally and can be viewed using browser developer tools. Use public or limited-scope keys only.
+        </p>
+      </div>
+
+      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #444;" />
+
+    <h2> Tool Selection</h2>
+    <div id="tool-settings">
+      <div class="tool-group">
+        <strong>IP Tools:</strong><br>
+        <label><input type="checkbox" data-type="ip" value="virustotal"> VirusTotal</label>
+        <label><input type="checkbox" data-type="ip" value="abuseipdb"> AbuseIPDB</label>
+        <label><input type="checkbox" data-type="ip" value="ipqs"> IPQS</label>
+        <label><input type="checkbox" data-type="ip" value="shodan"> Shodan</label>
+        <label><input type="checkbox" data-type="ip" value="censys"> Censys</label>
+        <label><input type="checkbox" data-type="ip" value="greynoise"> GreyNoise</label>
+        <label><input type="checkbox" data-type="ip" value="talos"> TalosIntel</label>
+      </div>
+
+      <div class="tool-group">
+        <strong>Domain Tools:</strong><br>
+        <label><input type="checkbox" data-type="domain" value="virustotal"> VirusTotal</label>
+        <label><input type="checkbox" data-type="domain" value="urlscan"> URLScan</label>
+        <label><input type="checkbox" data-type="domain" value="alienvault"> AlienVault</label>
+      </div>
+
+      <div class="tool-group">
+        <strong>Hash Tools:</strong><br>
+        <label><input type="checkbox" data-type="hash" value="virustotal"> VirusTotal</label>
+        <label><input type="checkbox" data-type="hash" value="hybrid"> Hybrid Analysis</label>
+      </div>
+
+      <div class="tool-group">
+        <strong>Email Tools:</strong><br>
+        <label><input type="checkbox" data-type="email" value="google"> Google Search</label>
+        <label><input type="checkbox" data-type="email" value="hibp"> HaveIBeenPwned</label>
+      </div>
+
+      <button id="save-tool-settings">💾 Save Tool Selection</button>
+    </div>
+
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

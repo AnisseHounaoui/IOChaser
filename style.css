@@ -1,0 +1,221 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 460px;
+  padding: 10px;
+  background: #1e1e1e;
+  color: white;
+}
+
+h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #66c0f4;
+}
+
+.ioc-item {
+  margin-bottom: 8px;
+  padding: 5px;
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+.ioc-item span {
+  display: inline-block;
+  width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+.ioc-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.ioc-buttons button {
+  margin: 2px 4px 2px 0;
+}
+
+button {
+  margin-left: 5px;
+  padding: 2px 6px;
+  font-size: 12px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+.ioc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.ioc-header span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ioc-item button {
+  margin: 0 2px;
+}
+
+.result-container {
+  white-space: nowrap; 
+  overflow: visible;   
+  text-overflow: ellipsis; 
+}
+
+#api-settings {
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+#api-settings label {
+  display: block;
+  margin: 5px 0 2px;
+}
+
+#api-settings input {
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 8px;
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 3px;
+}
+
+#tab-buttons {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#tab-buttons .tab {
+  flex: 1;
+  background-color: #333;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+}
+
+#tab-buttons .tab.active {
+  border-bottom: 2px solid #66c0f4;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+#tool-settings {
+  margin-top: 10px;
+}
+
+.tool-group {
+  margin-bottom: 12px;
+}
+
+.tool-group label {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 13px;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+body.dark {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+body.dark .ioc-item {
+  background: #2a2a2a;
+}
+
+body.dark button {
+  background-color: #444;
+  color: white;
+}
+
+body.dark button:hover {
+  background-color: #666;
+}
+
+body.light {
+  background: #f8f8f8;
+  color: #222;
+}
+
+body.light input,
+body.light textarea {
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+body.light .ioc-item {
+  background: #eaeaea;
+}
+
+body.light button {
+  background-color: #ddd;
+  color: #222;
+}
+
+body.light button:hover {
+  background-color: #ccc;
+}
+
+
+#search-container {
+  margin-bottom: 8px;
+}
+
+#ioc-search {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  font-size: 13px;
+  background: inherit; 
+  color: inherit;
+}
+
+body.light #ioc-search {
+  border: 1px solid #ccc;
+}
