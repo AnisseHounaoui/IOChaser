@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breach Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+    }
+    .breach-detail {
+      background: white;
+      border-radius: 5px;
+      padding: 15px;
+      margin: 10px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    img {
+      max-width: 100px;
+      margin-right: 10px;
+    }
+    .breach-header {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Breach Details</h1>
+  <div id="breachDetailsContainer"></div>
+  
+  <script>
+    window.onload = function() {
+      const breachData = JSON.parse(localStorage.getItem("breachDetails"));
+      if (breachData) {
+        displayBreachDetails(breachData);
+      } else {
+        document.getElementById("breachDetailsContainer").innerHTML = "<p>No breach data available.</p>";
+      }
+    }
+
+    function displayBreachDetails(breachData) {
+      const container = document.getElementById('breachDetailsContainer');
+      container.innerHTML = '';
+
+      breachData.forEach(breach => {
+        const breachDiv = document.createElement('div');
+        breachDiv.className = 'breach-detail';
+
+        const breachHeader = document.createElement('div');
+        breachHeader.className = 'breach-header';
+        breachHeader.textContent = breach.name;
+        breachDiv.appendChild(breachHeader);
+
+        if (breach.logo) {
+          const logoImg = document.createElement('img');
+          logoImg.src = breach.logo;
+          logoImg.alt = `${breach.name} Logo`;
+          breachDiv.appendChild(logoImg);
+        }
+
+        const domain = document.createElement('p');
+        domain.textContent = `Domain: ${breach.domain}`;
+        breachDiv.appendChild(domain);
+
+        const breachDate = document.createElement('p');
+        breachDate.textContent = `Breach Date: ${breach.breachDate}`;
+        breachDiv.appendChild(breachDate);
+
+        const dataClasses = document.createElement('p');
+        dataClasses.textContent = `Exposed Data: ${breach.dataClasses.join(', ')}`;
+        breachDiv.appendChild(dataClasses);
+
+        const pwnCount = document.createElement('p');
+        pwnCount.textContent = `Pwn Count: ${breach.pwnCount}`;
+        breachDiv.appendChild(pwnCount);
+
+        const description = document.createElement('p');
+        description.textContent = `Description: ${breach.description}`;
+        breachDiv.appendChild(description);
+
+        container.appendChild(breachDiv);
+      });
+    }
+  </script>
+</body>
+</html>
